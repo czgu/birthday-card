@@ -173,4 +173,11 @@
     .card-sticker {
         margin-left: 20%;
     }
+
+    &.open-fully {
+        // Safari bug that z-index is broken under transform
+        // https://stackoverflow.com/questions/22621544/webkit-transform-breaks-z-index-on-safari
+        transform: translateZ(1000px);
+        transform-style: preserve-3d;
+    }
 }
