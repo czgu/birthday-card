@@ -70,6 +70,7 @@ export default class Card extends Component {
             'close-fully': cardState === CardState.Close,
         });
 
+        const cardTitle = process.env.REACT_APP_CARD_TITLE;
         const message = process.env.REACT_APP_MESSAGE;
         const signature = process.env.REACT_APP_SIGNATURE;
 
@@ -85,7 +86,7 @@ export default class Card extends Component {
                 <div className="card-front">
                     <div className="card-content">
                         <div className="card-front-front">
-                            <h1 className="card-title">Happy Birthday</h1>
+                            <h1 className="card-title">{cardTitle}</h1>
                         </div>
                         <div className="card-front-back">
                             <img
