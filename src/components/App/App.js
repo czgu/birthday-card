@@ -7,20 +7,28 @@ import Fireworks from '../Fireworks/Fireworks';
 import './App.scss';
 
 class App extends Component {
-    backgroundAudio = null;
+    backgroundAudioRef = React.createRef();
 
     componentDidMount() {
-        this.backgroundAudio = new Audio('/lovesosweet.mp3');
-        this.backgroundAudio.play();
+        this.backgroundAudioRef.current.play();
     }
 
     componentWillUnmount() {
-        this.backgroundAudio.pause();
+        this.backgroundAudioRef.current.pause();
     }
 
     render() {
         return (
             <div className="App">
+                <div className="background-music">
+                    <audio
+                        preload="auto"
+                        ref={this.backgroundAudioRef}
+                        loop={true}
+                    >
+                        <source src="/lovesosweet.mp3" type="audio/mpeg" />
+                    </audio>
+                </div>
                 <Background />
                 <Fireworks />
                 <Snowflakes />
