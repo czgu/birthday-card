@@ -7,6 +7,17 @@ import Fireworks from '../Fireworks/Fireworks';
 import './App.scss';
 
 class App extends Component {
+    backgroundAudio = null;
+
+    componentDidMount() {
+        this.backgroundAudio = new Audio('/lovesosweet.mp3');
+        this.backgroundAudio.play();
+    }
+
+    componentWillUnmount() {
+        this.backgroundAudio.pause();
+    }
+
     render() {
         return (
             <div className="App">
