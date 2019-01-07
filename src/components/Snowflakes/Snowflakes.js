@@ -15,5 +15,17 @@ export default () => (
         <div className="snowflake">❆</div>
         <div className="snowflake">❅</div>
         <div className="snowflake">❆</div>
+        <div className="snowflake">❅</div>
+        <div className="snowflake">❆</div>
+        <div className="snowflake">❅</div>
+        <div className="snowflake">❆</div>
+        <div className="snowflake">❅</div>
+        <div className="snowflake">❆</div>
+        <div className="snowflake">❅</div>
+        <div className="snowflake">❆</div>
+        <div className="snowflake">❅</div>
+        <div className="snowflake">❆</div>
+        <div className="snowflake">❅</div>
+        <div className="snowflake">❆</div>
     </div>
 );

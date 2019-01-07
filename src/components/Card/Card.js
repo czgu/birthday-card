@@ -84,7 +84,16 @@ export default class Card extends Component {
                 </div>
 
                 <div className="card-front">
-                    <div className="card-content">
+                    <div
+                        className="card-content"
+                        onClick={
+                            cardState == CardState.Close
+                                ? this.handleCardOpen
+                                : cardState == CardState.Open
+                                ? this.handleCardClose
+                                : null
+                        }
+                    >
                         <div className="card-front-front">
                             <h1 className="card-title">{cardTitle}</h1>
                         </div>

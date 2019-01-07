@@ -9,6 +9,12 @@
     -webkit-perspective: 5000px;
     position: relative;
 
+    -webkit-animation: slide 4s forwards;
+    -webkit-animation-delay: 1s;
+    animation: slide 4s forwards;
+    animation-delay: 1s;
+    top: -5000px;
+
     &,
     .card-front,
     .card-inside {
@@ -142,6 +148,11 @@
         display: none;
     }
 
+    &.close-fully .card-front .card-content,
+    &.open-fully .card-front .card-content {
+        cursor: pointer;
+    }
+
     .CardButton {
         outline: none;
         position: absolute;
@@ -177,5 +188,11 @@
         // https://stackoverflow.com/questions/22621544/webkit-transform-breaks-z-index-on-safari
         transform: translateZ(1000px);
         transform-style: preserve-3d;
+    }
+}
+
+@keyframes slide {
+    100% {
+        top: 0;
     }
 }
